@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canica — A Place to Play</title>
+  <meta name="description" content="Un espacio de juego y café para niños y padres. Havre 73, Juárez, CDMX." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <div class="wordmark-marbles" aria-label="Canica">
+        <span class="marble">c</span>
+        <span class="marble">a</span>
+        <span class="marble">n</span>
+        <span class="marble">i</span>
+        <span class="marble">c</span>
+        <span class="marble">a</span>
+      </div>
+    </div>
+    <div class="nav__links">
+      <a href="#membresias">Membresías</a>
+      <a href="#cafe">Café</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#reservar" class="btn-nav">Reservar</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#membresias">Membresías</a>
+    <a href="#cafe">Café</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#reservar">Reservar</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-shapes">
+      <div class="shape shape--circle shape--yellow"></div>
+      <div class="shape shape--square shape--red"></div>
+      <div class="shape shape--triangle shape--green"></div>
+      <div class="shape shape--circle shape--blue"></div>
+      <div class="shape shape--circle shape--violet"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__wordmark-big" aria-label="Canica">
+        <span class="geo-letter geo-c">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="var(--pink)"/><text x="50" y="67" text-anchor="middle" class="geo-char">C</text></svg>
+        </span>
+        <span class="geo-letter geo-a">
+          <svg viewBox="0 0 100 100"><rect x="10" y="25" width="50" height="50" fill="var(--yellow)"/><circle cx="75" cy="30" r="20" fill="var(--yellow)"/><text x="45" y="68" text-anchor="middle" class="geo-char">A</text></svg>
+        </span>
+        <span class="geo-letter geo-n">
+          <svg viewBox="0 0 100 100"><rect x="8" y="8" width="84" height="84" fill="var(--green)"/><text x="50" y="70" text-anchor="middle" class="geo-char">N</text></svg>
+        </span>
+        <span class="geo-letter geo-i">
+          <svg viewBox="0 0 100 100"><polygon points="50,2 98,98 2,98" fill="var(--orange)"/><circle cx="50" cy="28" r="12" fill="var(--red)"/><text x="50" y="85" text-anchor="middle" class="geo-char geo-char--small">i</text></svg>
+        </span>
+        <span class="geo-letter geo-c2">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="var(--blue)"/><text x="50" y="67" text-anchor="middle" class="geo-char">C</text></svg>
+        </span>
+        <span class="geo-letter geo-a2">
+          <svg viewBox="0 0 100 100"><rect x="15" y="30" width="70" height="55" fill="var(--red)"/><text x="50" y="74" text-anchor="middle" class="geo-char">A</text></svg>
+        </span>
+      </div>
+      <p class="hero__tagline reveal-up">Un lugar para jugar.<br><em>Un lugar para respirar.</em></p>
+      <div class="hero__cta reveal-up">
+        <a href="#membresias" class="btn btn--primary">Ver Membresías</a>
+        <a href="#cafe" class="btn btn--ghost">Explorar el Café</a>
+      </div>
+    </div>
+    <div class="hero__address reveal-up">
+      <span class="label">Havre 73, Juárez, Cuauhtémoc</span>
+      <span class="label italic">Ciudad de México</span>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section class="concept" id="concept">
+    <div class="concept__text reveal-up">
+      <span class="eyebrow">One place, two rhythms</span>
+      <h2>Ni tú ni tus hijos tienen que comprometerse.</h2>
+      <p>Canica nació de una pregunta simple: ¿por qué los papás siempre tienen que sacrificar algo? Aquí los niños juegan de verdad y los adultos finalmente descansan — en el mismo lugar, al mismo tiempo.</p>
+    </div>
+    <div class="concept__split">
+      <div class="concept__card concept__card--kids reveal-left">
+        <div class="concept__card-label">Para ellos</div>
+        <div class="wordmark-geo-small" aria-hidden="true">
+          <span class="geo-mini geo-mini--c1"></span>
+          <span class="geo-mini geo-mini--a1"></span>
+          <span class="geo-mini geo-mini--n"></span>
+          <span class="geo-mini geo-mini--i"></span>
+          <span class="geo-mini geo-mini--c2"></span>
+          <span class="geo-mini geo-mini--a2"></span>
+        </div>
+        <h3>Juego sin límites</h3>
+        <p>Espacio de juego libre, talleres, actividades — diseñados para que los niños se pierdan en su propio mundo.</p>
+        <ul class="feature-list">
+          <li>Área de juego libre</li>
+          <li>Talleres creativos</li>
+          <li>Espacio de lectura</li>
+          <li>Fiestas privadas</li>
+        </ul>
+      </div>
+      <div class="concept__card concept__card--adults reveal-right">
+        <div class="concept__card-label">Para ti</div>
+        <div class="wordmark-marbles-small" aria-hidden="true">
+          <span class="marble-s">c</span>
+          <span class="marble-s">a</span>
+          <span class="marble-s">n</span>
+          <span class="marble-s">i</span>
+          <span class="marble-s">c</span>
+          <span class="marble-s">a</span>
+        </div>
+        <h3>Tu café de barrio</h3>
+        <p>Café de especialidad, desayunos y un rincón donde el tiempo pasa diferente. Porque tú también mereces algo bueno.</p>
+        <ul class="feature-list">
+          <li>Café de especialidad</li>
+          <li>Desayunos y snacks</li>
+          <li>WiFi y trabajo</li>
+          <li>Comunidad de padres</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIPS -->
+  <section class="membresias" id="membresias">
+    <div class="section-header reveal-up">
+      <span class="eyebrow">Membresías</span>
+      <h2>Escoge tu ritmo.</h2>
+      <p>Compra una vez y olvídate. Tu familia siempre tendrá un lugar.</p>
+    </div>
+    <div class="tiers">
+      <!-- TIER 1 -->
+      <div class="tier reveal-up" data-delay="0">
+        <div class="tier__header">
+          <div class="tier__badge" style="background: var(--blue)">
+            <span class="marble-badge">c</span><span class="marble-badge">a</span><span class="marble-badge">n</span><span class="marble-badge">i</span><span class="marble-badge">c</span><span class="marble-badge">a</span>
+          </div>
+          <h3 class="tier__name">Básica</h3>
+        </div>
+        <div class="tier__price">
+          <span class="price-amount">$450</span>
+          <span class="price-period">/ mes</span>
+        </div>
+        <ul class="tier__perks">
+          <li>4 visitas al mes</li>
+          <li>Descuento 10% en café</li>
+          <li>Acceso a eventos</li>
+        </ul>
+        <a href="#reservar" class="btn btn--outline">Empezar</a>
+      </div>
+
+      <!-- TIER 2 - RECOMMENDED -->
+      <div class="tier tier--featured reveal-up" data-delay="0.1">
+        <div class="tier__badge-recommended">Más popular</div>
+        <div class="tier__header">
+          <div class="tier__badge" style="background: var(--orange)">
+            <span class="marble-badge">c</span><span class="marble-badge">a</span><span class="marble-badge">n</span><span class="marble-badge">i</span><span class="marble-badge">c</span><span class="marble-badge">a</span>
+          </div>
+          <h3 class="tier__name">The Boss</h3>
+        </div>
+        <div class="tier__price">
+          <span class="price-amount">$750</span>
+          <span class="price-period">/ mes</span>
+        </div>
+        <ul class="tier__perks">
+          <li>Visitas ilimitadas fines de semana</li>
+          <li><strong>1 café por semana incluido</strong></li>
+          <li><strong>1 desayuno al mes</strong></li>
+          <li>Descuento 20% en tienda</li>
+          <li>Prioridad en eventos</li>
+          <li>Comunidad WhatsApp exclusiva</li>
+        </ul>
+        <a href="#reservar" class="btn btn--primary">Empezar</a>
+      </div>
+
+      <!-- TIER 3 -->
+      <div class="tier reveal-up" data-delay="0.2">
+        <div class="tier__header">
+          <div class="tier__badge" style="background: var(--green)">
+            <span class="marble-badge">c</span><span class="marble-badge">a</span><span class="marble-badge">n</span><span class="marble-badge">i</span><span class="marble-badge">c</span><span class="marble-badge">a</span>
+          </div>
+          <h3 class="tier__name">Ilimitada</h3>
+        </div>
+        <div class="tier__price">
+          <span class="price-amount">$950</span>
+          <span class="price-period">/ mes</span>
+        </div>
+        <ul class="tier__perks">
+          <li>Acceso ilimitado Lun–Vie</li>
+          <li>Café diario incluido</li>
+          <li>Invitado gratis al mes</li>
+          <li>Descuento 30% en todo</li>
+          <li>Reserva anticipada de fiestas</li>
+          <li>Comunidad WhatsApp exclusiva</li>
+        </ul>
+        <a href="#reservar" class="btn btn--outline">Empezar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAFÉ -->
+  <section class="cafe" id="cafe">
+    <div class="cafe__inner">
+      <div class="cafe__text reveal-left">
+        <span class="eyebrow">El Café</span>
+        <h2>Buen café.<br>Buenos momentos.</h2>
+        <p>Selección de especialidad, desayunos de verdad y un ambiente que te da ganas de quedarte. Porque mereces algo más que café de thermos.</p>
+        <button class="btn btn--primary" id="menu-toggle">Ver Menú Completo</button>
+      </div>
+      <div class="cafe__menu-preview reveal-right">
+        <div class="menu-card">
+          <div class="menu-category">
+            <h4>Café</h4>
+            <div class="menu-items">
+              <div class="menu-item"><span>Espresso</span><span>$55</span></div>
+              <div class="menu-item"><span>Cappuccino</span><span>$70</span></div>
+              <div class="menu-item"><span>Latte de la casa</span><span>$75</span></div>
+              <div class="menu-item"><span>Matcha latte</span><span>$80</span></div>
+            </div>
+          </div>
+          <div class="menu-divider"></div>
+          <div class="menu-category">
+            <h4>Desayunos</h4>
+            <div class="menu-items">
+              <div class="menu-item"><span>Tostada con aguacate</span><span>$115</span></div>
+              <div class="menu-item"><span>Bowl de fruta y granola</span><span>$95</span></div>
+              <div class="menu-item"><span>Huevos revueltos</span><span>$130</span></div>
+            </div>
+          </div>
+          <div class="menu-divider"></div>
+          <div class="menu-category">
+            <h4>Para ellos</h4>
+            <div class="menu-items">
+              <div class="menu-item"><span>Leche con cacao</span><span>$45</span></div>
+              <div class="menu-item"><span>Galleta Canica</span><span>$35</span></div>
+              <div class="menu-item"><span>Jugo del día</span><span>$55</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="eventos" id="eventos">
+    <div class="section-header reveal-up">
+      <span class="eyebrow">Talleres y Eventos</span>
+      <h2>Siempre hay algo pasando.</h2>
+    </div>
+    <div class="events-grid">
+      <div class="event-card reveal-up" data-delay="0">
+        <div class="event-card__poster event-card__poster--1">
+          <div class="poster-shape poster-shape--big" style="background: var(--yellow)"></div>
+          <div class="poster-shape poster-shape--circle" style="background: var(--green)"></div>
+          <div class="event-card__date">Próximamente</div>
+        </div>
+        <div class="event-card__info">
+          <span class="event-type">Taller Infantil</span>
+          <h4>Taller de Cookies</h4>
+          <p>Hornear, decorar y comer. El orden importa poco.</p>
+        </div>
+      </div>
+      <div class="event-card reveal-up" data-delay="0.1">
+        <div class="event-card__poster event-card__poster--2">
+          <div class="poster-shape poster-shape--big" style="background: var(--blue)"></div>
+          <div class="poster-shape poster-shape--circle" style="background: var(--pink)"></div>
+          <div class="event-card__date">Próximamente</div>
+        </div>
+        <div class="event-card__info">
+          <span class="event-type">Taller para Padres</span>
+          <h4>Arte y Maternidad</h4>
+          <p>Charla con artistas sobre creatividad y vida con hijos.</p>
+        </div>
+      </div>
+      <div class="event-card reveal-up" data-delay="0.2">
+        <div class="event-card__poster event-card__poster--3">
+          <div class="poster-shape poster-shape--big" style="background: var(--red)"></div>
+          <div class="poster-shape poster-shape--circle" style="background: var(--orange)"></div>
+          <div class="event-card__date">Próximamente</div>
+        </div>
+        <div class="event-card__info">
+          <span class="event-type">Fiesta Privada</span>
+          <h4>Fiestas Canica</h4>
+          <p>El espacio completo para ti. Nosotros nos encargamos del resto.</p>
+        </div>
+      </div>
+    </div>
+    <div class="eventos__cta reveal-up">
+      <a href="#reservar" class="btn btn--ghost">Ver todos los eventos</a>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Un lugar para jugar</span>
+      <span class="marquee-dot">●</span>
+      <span>One place, two rhythms</span>
+      <span class="marquee-dot">●</span>
+      <span>Havre 73, CDMX</span>
+      <span class="marquee-dot">●</span>
+      <span>Un lugar para respirar</span>
+      <span class="marquee-dot">●</span>
+      <span>A place to play</span>
+      <span class="marquee-dot">●</span>
+      <span>Un lugar para jugar</span>
+      <span class="marquee-dot">●</span>
+      <span>One place, two rhythms</span>
+      <span class="marquee-dot">●</span>
+      <span>Havre 73, CDMX</span>
+      <span class="marquee-dot">●</span>
+      <span>Un lugar para respirar</span>
+      <span class="marquee-dot">●</span>
+      <span>A place to play</span>
+      <span class="marquee-dot">●</span>
+    </div>
+  </div>
+
+  <!-- CTA / RESERVAR -->
+  <section class="cta-section" id="reservar">
+    <div class="cta-section__inner reveal-up">
+      <span class="eyebrow eyebrow--light">¿Listo para entrar?</span>
+      <h2>Tu primer visita<br>te va a convencer.</h2>
+      <p>Agenda una visita, únete a una membresía o reserva tu fiesta. Estamos en Havre 73.</p>
+      <div class="cta-section__buttons">
+        <a href="https://wa.me/521XXXXXXXXXX" class="btn btn--white" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a href="mailto:hola@canica.mx" class="btn btn--ghost-white">Enviar un correo</a>
+      </div>
+    </div>
+    <div class="cta-section__shapes" aria-hidden="true">
+      <div class="cta-shape cta-shape--1"></div>
+      <div class="cta-shape cta-shape--2"></div>
+      <div class="cta-shape cta-shape--3"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__logo">
+      <div class="wordmark-marbles" aria-label="Canica">
+        <span class="marble">c</span>
+        <span class="marble">a</span>
+        <span class="marble">n</span>
+        <span class="marble">i</span>
+        <span class="marble">c</span>
+        <span class="marble">a</span>
+      </div>
+    </div>
+    <div class="footer__info">
+      <p>Havre 73, Juárez, Cuauhtémoc<br>Ciudad de México</p>
+      <p><a href="mailto:hola@canica.mx">hola@canica.mx</a></p>
+    </div>
+    <div class="footer__links">
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="footer__legal">
+      <span>© 2025 Canica</span>
+      <span>Branding: Mestiza Estudio</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
