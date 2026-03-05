@@ -12,17 +12,16 @@
 </head>
 <body>
 
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__logo">
-      <div class="wordmark-marbles" aria-label="Canica">
-        <span class="marble">c</span>
-        <span class="marble">a</span>
-        <span class="marble">n</span>
-        <span class="marble">i</span>
-        <span class="marble">c</span>
-        <span class="marble">a</span>
-      </div>
+      <a href="#hero">
+        <img src="assets/images/logo-alt-black.png" alt="Canica" class="nav__logo-img" />
+      </a>
     </div>
     <div class="nav__links">
       <a href="#membresias">Membresías</a>
@@ -46,33 +45,18 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero__bg-shapes">
-      <div class="shape shape--circle shape--yellow"></div>
-      <div class="shape shape--square shape--red"></div>
-      <div class="shape shape--triangle shape--green"></div>
-      <div class="shape shape--circle shape--blue"></div>
-      <div class="shape shape--circle shape--violet"></div>
+      <img src="assets/illustrations/ch_4.png" alt="" class="hero__char hero__char--1" aria-hidden="true" />
+      <img src="assets/illustrations/ch_2.png" alt="" class="hero__char hero__char--2" aria-hidden="true" />
+      <img src="assets/illustrations/ch_5.png" alt="" class="hero__char hero__char--3" aria-hidden="true" />
+      <img src="assets/illustrations/ch_6.png" alt="" class="hero__char hero__char--4" aria-hidden="true" />
     </div>
     <div class="hero__content">
-      <div class="hero__wordmark-big" aria-label="Canica">
-        <span class="geo-letter geo-c">
-          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="var(--pink)"/><text x="50" y="67" text-anchor="middle" class="geo-char">C</text></svg>
-        </span>
-        <span class="geo-letter geo-a">
-          <svg viewBox="0 0 100 100"><rect x="10" y="25" width="50" height="50" fill="var(--yellow)"/><circle cx="75" cy="30" r="20" fill="var(--yellow)"/><text x="45" y="68" text-anchor="middle" class="geo-char">A</text></svg>
-        </span>
-        <span class="geo-letter geo-n">
-          <svg viewBox="0 0 100 100"><rect x="8" y="8" width="84" height="84" fill="var(--green)"/><text x="50" y="70" text-anchor="middle" class="geo-char">N</text></svg>
-        </span>
-        <span class="geo-letter geo-i">
-          <svg viewBox="0 0 100 100"><polygon points="50,2 98,98 2,98" fill="var(--orange)"/><circle cx="50" cy="28" r="12" fill="var(--red)"/><text x="50" y="85" text-anchor="middle" class="geo-char geo-char--small">i</text></svg>
-        </span>
-        <span class="geo-letter geo-c2">
-          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="var(--blue)"/><text x="50" y="67" text-anchor="middle" class="geo-char">C</text></svg>
-        </span>
-        <span class="geo-letter geo-a2">
-          <svg viewBox="0 0 100 100"><rect x="15" y="30" width="70" height="55" fill="var(--red)"/><text x="50" y="74" text-anchor="middle" class="geo-char">A</text></svg>
-        </span>
-      </div>
+      <img
+        src="assets/images/logo-geo-colour.png"
+        alt="Canica"
+        class="hero__logo-geo"
+        id="hero-logo"
+      />
       <p class="hero__tagline reveal-up">Un lugar para jugar.<br><em>Un lugar para respirar.</em></p>
       <div class="hero__cta reveal-up">
         <a href="#membresias" class="btn btn--primary">Ver Membresías</a>
@@ -99,14 +83,7 @@
     <div class="concept__split">
       <div class="concept__card concept__card--kids reveal-left">
         <div class="concept__card-label">Para ellos</div>
-        <div class="wordmark-geo-small" aria-hidden="true">
-          <span class="geo-mini geo-mini--c1"></span>
-          <span class="geo-mini geo-mini--a1"></span>
-          <span class="geo-mini geo-mini--n"></span>
-          <span class="geo-mini geo-mini--i"></span>
-          <span class="geo-mini geo-mini--c2"></span>
-          <span class="geo-mini geo-mini--a2"></span>
-        </div>
+        <img src="assets/images/logo-geo-colour.png" alt="Canica" class="card-logo card-logo--geo" aria-hidden="true" />
         <h3>Juego sin límites</h3>
         <p>Espacio de juego libre, talleres, actividades — diseñados para que los niños se pierdan en su propio mundo.</p>
         <ul class="feature-list">
@@ -118,14 +95,7 @@
       </div>
       <div class="concept__card concept__card--adults reveal-right">
         <div class="concept__card-label">Para ti</div>
-        <div class="wordmark-marbles-small" aria-hidden="true">
-          <span class="marble-s">c</span>
-          <span class="marble-s">a</span>
-          <span class="marble-s">n</span>
-          <span class="marble-s">i</span>
-          <span class="marble-s">c</span>
-          <span class="marble-s">a</span>
-        </div>
+        <img src="assets/images/logo-alt-colour.png" alt="Canica" class="card-logo card-logo--alt" aria-hidden="true" />
         <h3>Tu café de barrio</h3>
         <p>Café de especialidad, desayunos y un rincón donde el tiempo pasa diferente. Porque tú también mereces algo bueno.</p>
         <ul class="feature-list">
@@ -149,9 +119,7 @@
       <!-- TIER 1 -->
       <div class="tier reveal-up" data-delay="0">
         <div class="tier__header">
-          <div class="tier__badge" style="background: var(--blue)">
-            <span class="marble-badge">c</span><span class="marble-badge">a</span><span class="marble-badge">n</span><span class="marble-badge">i</span><span class="marble-badge">c</span><span class="marble-badge">a</span>
-          </div>
+          <img src="assets/images/logo-alt-colour.png" alt="Canica" class="tier__logo" />
           <h3 class="tier__name">Básica</h3>
         </div>
         <div class="tier__price">
@@ -354,14 +322,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__logo">
-      <div class="wordmark-marbles" aria-label="Canica">
-        <span class="marble">c</span>
-        <span class="marble">a</span>
-        <span class="marble">n</span>
-        <span class="marble">i</span>
-        <span class="marble">c</span>
-        <span class="marble">a</span>
-      </div>
+      <img src="assets/images/logo-alt-white.png" alt="Canica" class="footer__logo-img" />
     </div>
     <div class="footer__info">
       <p>Havre 73, Juárez, Cuauhtémoc<br>Ciudad de México</p>
@@ -379,6 +340,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

@@ -46,6 +46,52 @@
   --ease-in-out: cubic-bezier(0.87, 0, 0.13, 1);
 }
 
+/* CUSTOM CURSOR -------------------------------------------- */
+#cursor {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--black);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+}
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--black);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+}
+@media (hover: none) {
+  #cursor, #cursor-dot { display: none; }
+  body { cursor: auto !important; }
+}
+
+/* WORD SPLIT ----------------------------------------------- */
+.word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  line-height: 1.15;
+}
+.word {
+  display: inline-block;
+  will-change: transform;
+}
+
 /* RESET ---------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -95,63 +141,48 @@ em { font-style: italic; }
 }
 .italic { font-style: italic; }
 
-/* WORDMARK — Marble circles (adult/café) ------------------- */
-.wordmark-marbles {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-.marble {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--black);
-  color: var(--ivory);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1;
-  user-select: none;
-}
-.marble-s {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--black);
-  color: var(--ivory);
-  font-family: var(--font-display);
-  font-size: 0.7rem;
+/* WORDMARK — Nav logo image -------------------------------- */
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
-/* WORDMARK — Geo shapes (kids/playspace) ------------------- */
-.hero__wordmark-big {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: var(--space-md);
-}
-.geo-letter {
+/* WORDMARK — Hero geo logo --------------------------------- */
+.hero__logo-geo {
+  width: clamp(280px, 65vw, 780px);
+  height: auto;
   display: block;
-  width: clamp(60px, 10vw, 100px);
-  height: clamp(60px, 10vw, 100px);
+  margin: 0 auto var(--space-md);
 }
-.geo-letter svg { width: 100%; height: 100%; }
-.geo-char {
-  font-family: var(--font-display);
-  font-size: 52px;
-  font-weight: 400;
-  fill: var(--ivory);
+
+/* WORDMARK — Footer logo ----------------------------------- */
+.footer__logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  /* white version — no filter needed */
 }
-.geo-char--small { font-size: 40px; }
+
+/* WORDMARK — Card logos ------------------------------------ */
+.card-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+.card-logo--geo {
+  height: 36px;
+  /* On dark card bg, keep as-is — transparent PNG */
+}
+
+/* WORDMARK — Tier logo ------------------------------------- */
+.tier__logo {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
 
 /* BUTTONS -------------------------------------------------- */
 .btn {
@@ -297,6 +328,7 @@ em { font-style: italic; }
 
 /* HERO ----------------------------------------------------- */
 .hero {
+  perspective: 1200px;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -329,11 +361,16 @@ em { font-style: italic; }
   border-bottom: 140px solid var(--green);
   opacity: 0.1;
 }
-.shape--yellow { width: 300px; height: 300px; background: var(--yellow); top: -80px; right: 10%; }
-.shape--red    { width: 200px; height: 200px; background: var(--red);    bottom: 20%; left: 5%; }
-.shape--green  { top: 30%; right: -40px; }
-.shape--blue   { width: 400px; height: 400px; background: var(--blue);   top: 50%; left: -100px; }
-.shape--violet { width: 150px; height: 150px; background: var(--violet); bottom: 10%; right: 8%; }
+/* Hero illustration characters */
+.hero__char {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+.hero__char--1 { width: clamp(80px, 10vw, 140px); bottom: 12%; left: 6%;  }
+.hero__char--2 { width: clamp(70px, 9vw,  120px); top: 18%;   right: 5%; }
+.hero__char--3 { width: clamp(60px, 7vw,  100px); bottom: 20%; right: 12%; }
+.hero__char--4 { width: clamp(50px, 6vw,   80px); top: 22%;   left: 12%; }
 
 .hero__content {
   position: relative;
@@ -476,6 +513,7 @@ em { font-style: italic; }
 .membresias .section-header p  { margin: var(--space-sm) auto 0; opacity: 0.6; }
 
 .tiers {
+  perspective: 1400px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
@@ -516,34 +554,14 @@ em { font-style: italic; }
 }
 
 .tier__header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   margin-bottom: var(--space-md);
-}
-.tier__badge {
-  display: flex;
-  gap: 3px;
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
-}
-.marble-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  font-family: var(--font-display);
-  font-size: 0.55rem;
-  color: white;
 }
 .tier__name {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.9rem;
   letter-spacing: 0.05em;
+  margin-top: var(--space-xs);
 }
 
 .tier__price {
@@ -641,6 +659,7 @@ em { font-style: italic; }
 .section-header h2 { margin-bottom: var(--space-xs); }
 
 .events-grid {
+  perspective: 1400px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
