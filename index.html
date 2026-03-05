@@ -42,8 +42,21 @@
     <a href="#reservar">Reservar</a>
   </div>
 
+  <!-- SECTION PROGRESS DOTS -->
+  <div class="fp-dots" id="fp-dots" aria-hidden="true">
+    <button class="fp-dot fp-dot--active" data-index="0" title="Inicio"></button>
+    <button class="fp-dot" data-index="1" title="Concepto"></button>
+    <button class="fp-dot" data-index="2" title="Membresías"></button>
+    <button class="fp-dot" data-index="3" title="Café"></button>
+    <button class="fp-dot" data-index="4" title="Eventos"></button>
+    <button class="fp-dot" data-index="5" title="Reservar"></button>
+  </div>
+
+  <!-- FP CONTAINER -->
+  <div id="fp-container">
+
   <!-- HERO -->
-  <section class="hero" id="hero">
+  <section class="hero fp-section" id="hero" data-section="0">
     <div class="hero__bg-shapes">
       <img src="assets/illustrations/ch_4.png" alt="" class="hero__char hero__char--1" aria-hidden="true" />
       <img src="assets/illustrations/ch_2.png" alt="" class="hero__char hero__char--2" aria-hidden="true" />
@@ -74,7 +87,8 @@
   </section>
 
   <!-- CONCEPT -->
-  <section class="concept" id="concept">
+  <section class="concept fp-section" id="concept" data-section="1">
+  <div class="concept__inner">
     <div class="concept__text reveal-up">
       <span class="eyebrow">One place, two rhythms</span>
       <h2>Ni tú ni tus hijos tienen que comprometerse.</h2>
@@ -106,10 +120,11 @@
         </ul>
       </div>
     </div>
+  </div><!-- /concept__inner -->
   </section>
 
   <!-- MEMBERSHIPS -->
-  <section class="membresias" id="membresias">
+  <section class="membresias fp-section" id="membresias" data-section="2">
     <div class="section-header reveal-up">
       <span class="eyebrow">Membresías</span>
       <h2>Escoge tu ritmo.</h2>
@@ -184,7 +199,7 @@
   </section>
 
   <!-- CAFÉ -->
-  <section class="cafe" id="cafe">
+  <section class="cafe fp-section" id="cafe" data-section="3">
     <div class="cafe__inner">
       <div class="cafe__text reveal-left">
         <span class="eyebrow">El Café</span>
@@ -227,7 +242,7 @@
   </section>
 
   <!-- EVENTS -->
-  <section class="eventos" id="eventos">
+  <section class="eventos fp-section" id="eventos" data-section="4">
     <div class="section-header reveal-up">
       <span class="eyebrow">Talleres y Eventos</span>
       <h2>Siempre hay algo pasando.</h2>
@@ -275,8 +290,8 @@
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
+  <!-- MARQUEE (inside eventos section, hidden standalone) -->
+  <div class="marquee" aria-hidden="true" style="display:none">
     <div class="marquee__track">
       <span>Un lugar para jugar</span>
       <span class="marquee-dot">●</span>
@@ -302,7 +317,7 @@
   </div>
 
   <!-- CTA / RESERVAR -->
-  <section class="cta-section" id="reservar">
+  <section class="cta-section fp-section" id="reservar" data-section="5">
     <div class="cta-section__inner reveal-up">
       <span class="eyebrow eyebrow--light">¿Listo para entrar?</span>
       <h2>Tu primer visita<br>te va a convencer.</h2>
@@ -337,6 +352,8 @@
       <span>Branding: Mestiza Estudio</span>
     </div>
   </footer>
+
+  </div><!-- /fp-container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
