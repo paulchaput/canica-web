@@ -1,0 +1,84 @@
+<section class="s-memberships" id="s-memberships">
+  <div class="s-memberships__inner">
+    <div class="s-memberships__header reveal">
+      <span class="eyebrow eyebrow--light">{{ section.settings.eyebrow }}</span>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+    <div class="tiers">
+
+      <div class="tier reveal">
+        <img src="{{ 'logo-alt-white.png' | asset_url }}" alt="Canica" class="tier__logo">
+        <div class="tier__name">{{ section.settings.tier1_name }}</div>
+        <div class="tier__price">
+          <span class="tier__amount">{{ section.settings.tier1_price }}</span>
+          <span class="tier__period">/ mes</span>
+        </div>
+        <ul class="tier__perks">
+          {% assign t1 = section.settings.tier1_perks | split: '|' %}
+          {% for perk in t1 %}<li>{{ perk | strip }}</li>{% endfor %}
+        </ul>
+        <a href="{{ section.settings.tier1_url }}" class="btn btn--outline">{{ section.settings.cta_text }}</a>
+      </div>
+
+      <div class="tier tier--featured reveal">
+        <div class="tier__tag">{{ section.settings.tier2_badge }}</div>
+        <img src="{{ 'logo-alt-white.png' | asset_url }}" alt="Canica" class="tier__logo">
+        <div class="tier__name">{{ section.settings.tier2_name }}</div>
+        <div class="tier__price">
+          <span class="tier__amount">{{ section.settings.tier2_price }}</span>
+          <span class="tier__period">/ mes</span>
+        </div>
+        <ul class="tier__perks">
+          {% assign t2 = section.settings.tier2_perks | split: '|' %}
+          {% for perk in t2 %}<li>{{ perk | strip }}</li>{% endfor %}
+        </ul>
+        <a href="{{ section.settings.tier2_url }}" class="btn btn--primary">{{ section.settings.cta_text }}</a>
+      </div>
+
+      <div class="tier reveal">
+        <img src="{{ 'logo-alt-white.png' | asset_url }}" alt="Canica" class="tier__logo">
+        <div class="tier__name">{{ section.settings.tier3_name }}</div>
+        <div class="tier__price">
+          <span class="tier__amount">{{ section.settings.tier3_price }}</span>
+          <span class="tier__period">/ mes</span>
+        </div>
+        <ul class="tier__perks">
+          {% assign t3 = section.settings.tier3_perks | split: '|' %}
+          {% for perk in t3 %}<li>{{ perk | strip }}</li>{% endfor %}
+        </ul>
+        <a href="{{ section.settings.tier3_url }}" class="btn btn--outline">{{ section.settings.cta_text }}</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Membresías",
+  "settings": [
+    { "type": "text", "id": "eyebrow",     "label": "Eyebrow",    "default": "Membresías" },
+    { "type": "text", "id": "heading",     "label": "Título",     "default": "Escoge tu ritmo." },
+    { "type": "text", "id": "subheading",  "label": "Subtítulo",  "default": "Compra una vez y olvídate." },
+    { "type": "text", "id": "cta_text",    "label": "Texto botón","default": "Empezar" },
+    { "type": "header", "content": "Tier 1 — Básica" },
+    { "type": "text", "id": "tier1_name",  "label": "Nombre",     "default": "Básica" },
+    { "type": "text", "id": "tier1_price", "label": "Precio",     "default": "$450" },
+    { "type": "text", "id": "tier1_perks", "label": "Beneficios (separados por |)", "default": "4 visitas al mes|Descuento 10% en café|Acceso a eventos" },
+    { "type": "url",  "id": "tier1_url",   "label": "Link" },
+    { "type": "header", "content": "Tier 2 — The Boss" },
+    { "type": "text", "id": "tier2_name",  "label": "Nombre",     "default": "The Boss" },
+    { "type": "text", "id": "tier2_price", "label": "Precio",     "default": "$750" },
+    { "type": "text", "id": "tier2_badge", "label": "Badge",      "default": "Más popular" },
+    { "type": "text", "id": "tier2_perks", "label": "Beneficios (separados por |)", "default": "Visitas ilimitadas fines de semana|1 café por semana incluido|1 desayuno al mes|Descuento 20% en tienda|WhatsApp exclusivo" },
+    { "type": "url",  "id": "tier2_url",   "label": "Link" },
+    { "type": "header", "content": "Tier 3 — Ilimitada" },
+    { "type": "text", "id": "tier3_name",  "label": "Nombre",     "default": "Ilimitada" },
+    { "type": "text", "id": "tier3_price", "label": "Precio",     "default": "$950" },
+    { "type": "text", "id": "tier3_perks", "label": "Beneficios (separados por |)", "default": "Acceso ilimitado Lun–Vie|Café diario incluido|Invitado gratis al mes|Descuento 30% en todo" },
+    { "type": "url",  "id": "tier3_url",   "label": "Link" }
+  ],
+  "presets": [{ "name": "Membresías" }]
+}
+{% endschema %}

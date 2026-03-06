@@ -1,0 +1,34 @@
+<footer class="s-footer" id="s-footer">
+  <div>
+    <img src="{{ 'logo-alt-white.png' | asset_url }}" alt="{{ shop.name }}" class="s-footer__logo-img">
+  </div>
+  <div class="s-footer__info">
+    <p>{{ section.settings.address }}</p>
+    <p><a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></p>
+  </div>
+  <div class="s-footer__links">
+    {% if section.settings.instagram_url != blank %}
+      <a href="{{ section.settings.instagram_url }}" target="_blank" rel="noopener">Instagram</a>
+    {% endif %}
+    {% if section.settings.whatsapp_url != blank %}
+      <a href="{{ section.settings.whatsapp_url }}" target="_blank" rel="noopener">WhatsApp</a>
+    {% endif %}
+  </div>
+  <div class="s-footer__bottom">
+    <span>© {{ 'now' | date: '%Y' }} {{ shop.name }}</span>
+    <span>Branding: Mestiza Estudio</span>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "address",       "label": "Dirección",  "default": "Havre 73, Juárez, Cuauhtémoc, Ciudad de México" },
+    { "type": "text", "id": "email",         "label": "Email",      "default": "hola@canica.mx" },
+    { "type": "url",  "id": "instagram_url", "label": "Instagram" },
+    { "type": "url",  "id": "whatsapp_url",  "label": "WhatsApp" }
+  ],
+  "presets": [{ "name": "Footer" }]
+}
+{% endschema %}
