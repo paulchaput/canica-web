@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "hero":        { "type": "hero",        "settings": {} },
+    "concept":     { "type": "concept",     "settings": {} },
+    "memberships": { "type": "memberships", "settings": {} },
+    "cafe":        { "type": "cafe",        "settings": {} },
+    "events":      { "type": "events",      "settings": {}, "blocks": {
+      "event-1": { "type": "event", "settings": { "type": "Taller Infantil", "title": "Taller de Cookies", "description": "Hornear, decorar y comer. El orden importa poco.", "tag": "Próximamente", "color1": "#F2B435", "color2": "#D95A2B", "color3": "#2A6B3C" } },
+      "event-2": { "type": "event", "settings": { "type": "Para Padres", "title": "Arte y Maternidad", "description": "Charla con artistas sobre creatividad y vida con hijos.", "tag": "Próximamente", "color1": "#7B9FD4", "color2": "#C86B7A", "color3": "#F2B435", "shape1_round": 50 } },
+      "event-3": { "type": "event", "settings": { "type": "Fiesta Privada", "title": "Fiestas Canica", "description": "El espacio completo para ti.", "tag": "Reservar", "color1": "#F5F0E8", "color2": "#F2B435", "color3": "#D95A2B", "shape1_round": 50 } }
+    }, "block_order": ["event-1", "event-2", "event-3"] },
+    "marquee":     { "type": "marquee",     "settings": {} },
+    "cta":         { "type": "cta",         "settings": {} },
+    "footer":      { "type": "footer",      "settings": {} }
+  },
+  "order": ["hero", "concept", "memberships", "cafe", "events", "marquee", "cta", "footer"]
+}

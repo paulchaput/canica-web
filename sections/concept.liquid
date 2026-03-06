@@ -1,0 +1,55 @@
+<section class="s-concept" id="s-concept">
+  <div class="s-concept__inner">
+    <div class="s-concept__header reveal">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.body }}</p>
+    </div>
+    <div class="s-concept__grid">
+      <div class="concept-card concept-card--kids reveal reveal--left">
+        <div class="concept-card__label">{{ section.settings.kids_label }}</div>
+        <img src="{{ 'logo-geo-colour.png' | asset_url }}" alt="" class="concept-card__logo" aria-hidden="true">
+        <h3>{{ section.settings.kids_title }}</h3>
+        <p>{{ section.settings.kids_body }}</p>
+        <ul class="concept-card__list">
+          {% assign kids_perks = section.settings.kids_perks | split: ',' %}
+          {% for perk in kids_perks %}
+            <li>{{ perk | strip }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="concept-card concept-card--adults reveal reveal--right">
+        <div class="concept-card__label">{{ section.settings.adults_label }}</div>
+        <img src="{{ 'logo-alt-colour.png' | asset_url }}" alt="" class="concept-card__logo" aria-hidden="true">
+        <h3>{{ section.settings.adults_title }}</h3>
+        <p>{{ section.settings.adults_body }}</p>
+        <ul class="concept-card__list">
+          {% assign adults_perks = section.settings.adults_perks | split: ',' %}
+          {% for perk in adults_perks %}
+            <li>{{ perk | strip }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Concept",
+  "settings": [
+    { "type": "text",     "id": "eyebrow",       "label": "Eyebrow",          "default": "One place, two rhythms" },
+    { "type": "text",     "id": "heading",        "label": "Título",           "default": "Ni tú ni tus hijos tienen que comprometerse." },
+    { "type": "textarea", "id": "body",           "label": "Descripción",      "default": "Canica nació de una pregunta simple..." },
+    { "type": "text",     "id": "kids_label",     "label": "Label niños",      "default": "Para ellos" },
+    { "type": "text",     "id": "kids_title",     "label": "Título niños",     "default": "Juego sin límites" },
+    { "type": "textarea", "id": "kids_body",      "label": "Cuerpo niños",     "default": "Espacio de juego libre..." },
+    { "type": "text",     "id": "kids_perks",     "label": "Beneficios niños (separados por coma)", "default": "Área de juego libre, Talleres creativos, Espacio de lectura, Fiestas privadas" },
+    { "type": "text",     "id": "adults_label",   "label": "Label adultos",    "default": "Para ti" },
+    { "type": "text",     "id": "adults_title",   "label": "Título adultos",   "default": "Tu café de barrio" },
+    { "type": "textarea", "id": "adults_body",    "label": "Cuerpo adultos",   "default": "Café de especialidad..." },
+    { "type": "text",     "id": "adults_perks",   "label": "Beneficios adultos (separados por coma)", "default": "Café de especialidad, Desayunos y snacks, WiFi y trabajo, Comunidad de padres" }
+  ],
+  "presets": [{ "name": "Concepto" }]
+}
+{% endschema %}

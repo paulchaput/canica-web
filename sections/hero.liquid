@@ -1,0 +1,57 @@
+<section class="s-hero" id="s-hero">
+  <div class="s-hero__chars" aria-hidden="true">
+    <img src="{{ 'ch_4.png' | asset_url }}" alt="" class="hero__char hero__char--1">
+    <img src="{{ 'ch_2.png' | asset_url }}" alt="" class="hero__char hero__char--2">
+    <img src="{{ 'ch_5.png' | asset_url }}" alt="" class="hero__char hero__char--3">
+    <img src="{{ 'ch_6.png' | asset_url }}" alt="" class="hero__char hero__char--4">
+  </div>
+
+  <img
+    src="{{ 'logo-geo-colour.png' | asset_url }}"
+    alt="{{ section.settings.title }}"
+    class="s-hero__logo"
+    id="hero-logo"
+  >
+
+  <p class="s-hero__tagline">
+    {{ section.settings.tagline_line1 }}<br>
+    <em>{{ section.settings.tagline_line2 }}</em>
+  </p>
+
+  <div class="s-hero__cta">
+    <a href="{{ section.settings.cta_primary_url }}" class="btn btn--primary">
+      {{ section.settings.cta_primary_text }}
+    </a>
+    <a href="{{ section.settings.cta_secondary_url }}" class="btn btn--ghost">
+      {{ section.settings.cta_secondary_text }}
+    </a>
+  </div>
+
+  <div class="s-hero__address">
+    <span>{{ section.settings.address }}</span><br>
+    <em>{{ section.settings.city }}</em>
+  </div>
+
+  <div class="s-hero__scroll" aria-hidden="true">
+    <span>scroll</span>
+    <div class="s-hero__scroll-line"></div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    { "type": "text",  "id": "title",               "label": "Título (alt)",          "default": "Canica" },
+    { "type": "text",  "id": "tagline_line1",        "label": "Tagline línea 1",       "default": "Un lugar para jugar." },
+    { "type": "text",  "id": "tagline_line2",        "label": "Tagline línea 2",       "default": "Un lugar para respirar." },
+    { "type": "text",  "id": "cta_primary_text",     "label": "Botón principal",       "default": "Ver Membresías" },
+    { "type": "url",   "id": "cta_primary_url",      "label": "Link botón principal" },
+    { "type": "text",  "id": "cta_secondary_text",   "label": "Botón secundario",      "default": "Explorar el Café" },
+    { "type": "url",   "id": "cta_secondary_url",    "label": "Link botón secundario" },
+    { "type": "text",  "id": "address",              "label": "Dirección",             "default": "Havre 73, Juárez, Cuauhtémoc" },
+    { "type": "text",  "id": "city",                 "label": "Ciudad",                "default": "Ciudad de México" }
+  ],
+  "presets": [{ "name": "Hero" }]
+}
+{% endschema %}
