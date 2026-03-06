@@ -1,17 +1,173 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "hero":        { "type": "hero",        "settings": {} },
-    "concept":     { "type": "concept",     "settings": {} },
-    "memberships": { "type": "memberships", "settings": {} },
-    "cafe":        { "type": "cafe",        "settings": {} },
-    "events":      { "type": "events",      "settings": {}, "blocks": {
-      "event-1": { "type": "event", "settings": { "type": "Taller Infantil", "title": "Taller de Cookies", "description": "Hornear, decorar y comer. El orden importa poco.", "tag": "Próximamente", "color1": "#F2B435", "color2": "#D95A2B", "color3": "#2A6B3C" } },
-      "event-2": { "type": "event", "settings": { "type": "Para Padres", "title": "Arte y Maternidad", "description": "Charla con artistas sobre creatividad y vida con hijos.", "tag": "Próximamente", "color1": "#7B9FD4", "color2": "#C86B7A", "color3": "#F2B435", "shape1_round": 50 } },
-      "event-3": { "type": "event", "settings": { "type": "Fiesta Privada", "title": "Fiestas Canica", "description": "El espacio completo para ti.", "tag": "Reservar", "color1": "#F5F0E8", "color2": "#F2B435", "color3": "#D95A2B", "shape1_round": 50 } }
-    }, "block_order": ["event-1", "event-2", "event-3"] },
-    "marquee":     { "type": "marquee",     "settings": {} },
-    "cta":         { "type": "cta",         "settings": {} },
-    "footer":      { "type": "footer",      "settings": {} }
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "title": "Canica",
+        "tagline_line1": "Un lugar para jugar.",
+        "tagline_line2": "Un lugar para respirar.",
+        "cta_primary_text": "Ver Membresías",
+        "cta_primary_url": "#s-memberships",
+        "cta_secondary_text": "Explorar el Café",
+        "cta_secondary_url": "#s-cafe",
+        "address": "Havre 73, Juárez, Cuauhtémoc",
+        "city": "Ciudad de México"
+      }
+    },
+    "concept": {
+      "type": "concept",
+      "settings": {
+        "eyebrow": "One place, two rhythms",
+        "heading": "Ni tú ni tus hijos tienen que comprometerse.",
+        "body": "Canica nació de una pregunta simple...",
+        "kids_label": "Para ellos",
+        "kids_title": "Juego sin límites",
+        "kids_body": "Espacio de juego libre...",
+        "kids_perks": "Área de juego libre, Talleres creativos, Espacio de lectura, Fiestas privadas",
+        "adults_label": "Para ti",
+        "adults_title": "Tu café de barrio",
+        "adults_body": "Café de especialidad...",
+        "adults_perks": "Café de especialidad, Desayunos y snacks, WiFi y trabajo, Comunidad de padres"
+      }
+    },
+    "memberships": {
+      "type": "memberships",
+      "settings": {
+        "eyebrow": "Membresías",
+        "heading": "Escoge tu ritmo.",
+        "subheading": "Compra una vez y olvídate.",
+        "cta_text": "Empezar",
+        "tier1_name": "Básica",
+        "tier1_price": "$450",
+        "tier1_perks": "4 visitas al mes|Descuento 10% en café|Acceso a eventos",
+        "tier1_url": "",
+        "tier2_name": "The Boss",
+        "tier2_price": "$750",
+        "tier2_badge": "Más popular",
+        "tier2_perks": "Visitas ilimitadas fines de semana|1 café por semana incluido|1 desayuno al mes|Descuento 20% en tienda|WhatsApp exclusivo",
+        "tier2_url": "",
+        "tier3_name": "Ilimitada",
+        "tier3_price": "$950",
+        "tier3_perks": "Acceso ilimitado Lun–Vie|Café diario incluido|Invitado gratis al mes|Descuento 30% en todo",
+        "tier3_url": ""
+      }
+    },
+    "cafe": {
+      "type": "cafe",
+      "settings": {
+        "eyebrow": "El Café",
+        "heading": "Buen café. Buenos momentos.",
+        "body": "Selección de especialidad...",
+        "cta_text": "Reservar mesa",
+        "cta_url": "",
+        "cat1_name": "Café",
+        "cat1_items": "Espresso:$55|Cappuccino:$70|Latte de la casa:$75|Matcha latte:$80",
+        "cat2_name": "Desayunos",
+        "cat2_items": "Tostada con aguacate:$115|Bowl de granola:$95|Huevos revueltos:$130",
+        "cat3_name": "Para ellos",
+        "cat3_items": "Leche con cacao:$45|Galleta Canica:$35|Jugo del día:$55"
+      }
+    },
+    "events": {
+      "type": "events",
+      "blocks": {
+        "event-1": {
+          "type": "event",
+          "settings": {
+            "tag": "Próximamente",
+            "type": "Taller Infantil",
+            "title": "Taller de Cookies",
+            "description": "Hornear, decorar y comer. El orden importa poco.",
+            "color1": "#f2b435",
+            "color2": "#d95a2b",
+            "color3": "#2a6b3c",
+            "shape1_round": 0
+          }
+        },
+        "event-2": {
+          "type": "event",
+          "settings": {
+            "tag": "Próximamente",
+            "type": "Para Padres",
+            "title": "Arte y Maternidad",
+            "description": "Charla con artistas sobre creatividad y vida con hijos.",
+            "color1": "#7b9fd4",
+            "color2": "#c86b7a",
+            "color3": "#f2b435",
+            "shape1_round": 50
+          }
+        },
+        "event-3": {
+          "type": "event",
+          "settings": {
+            "tag": "Reservar",
+            "type": "Fiesta Privada",
+            "title": "Fiestas Canica",
+            "description": "El espacio completo para ti.",
+            "color1": "#f5f0e8",
+            "color2": "#f2b435",
+            "color3": "#d95a2b",
+            "shape1_round": 50
+          }
+        }
+      },
+      "block_order": [
+        "event-1",
+        "event-2",
+        "event-3"
+      ],
+      "settings": {
+        "eyebrow": "Talleres y Eventos",
+        "heading": "Siempre hay algo pasando.",
+        "cta_text": "Ver todos los eventos",
+        "cta_url": ""
+      }
+    },
+    "marquee": {
+      "type": "marquee",
+      "settings": {
+        "text": "Un lugar para jugar|One place, two rhythms|Havre 73, CDMX|Un lugar para respirar|A place to play"
+      }
+    },
+    "cta": {
+      "type": "cta",
+      "settings": {
+        "eyebrow": "¿Listo para entrar?",
+        "heading": "Tu primer visita te va a convencer.",
+        "body": "Agenda una visita, únete a una membresía o reserva tu fiesta. Estamos en Havre 73.",
+        "btn1_text": "Escribir por WhatsApp",
+        "btn1_url": "https://wa.me/521XXXXXXXXXX",
+        "btn2_text": "Enviar un correo",
+        "btn2_url": "mailto:hola@canica.mx"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "address": "Av. Mazatlan 83, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
+        "email": "hola@canica.mx",
+        "instagram_url": "https://instagram.com/canica.mx",
+        "whatsapp_url": "https://wa.me/521XXXXXXXXXX"
+      }
+    }
   },
-  "order": ["hero", "concept", "memberships", "cafe", "events", "marquee", "cta", "footer"]
+  "order": [
+    "hero",
+    "concept",
+    "memberships",
+    "cafe",
+    "events",
+    "marquee",
+    "cta",
+    "footer"
+  ]
 }
